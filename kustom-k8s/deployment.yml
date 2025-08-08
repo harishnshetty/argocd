@@ -43,7 +43,7 @@ metadata:
     app.kubernetes.io/name: myingress
 spec:
   rules:
-  - host: nginx1.harish.com
+  - host: nginx.harish.com
     http:
       paths:
       - pathType: Prefix
