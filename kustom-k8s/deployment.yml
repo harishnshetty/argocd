@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: myapp
 spec:
+  replicas: 2
   selector:
     matchLabels:
       app: myapp
@@ -54,3 +55,26 @@ spec:
             port: 
               number: 80
 
+
+
+
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: myreplicaset
+  labels:
+    app: myapp
+    key: value
+spec:
+  replicas: <Replicas>
+  selector:
+    matchLabels:
+      key: value
+  template:
+    metadata:
+      labels:
+        key: value
+    spec:
+      containers:
+        - name: myapp
+          image: <Image>
