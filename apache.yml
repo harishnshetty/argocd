@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: httpd
-        image: httpd:latest
+        image: lighttpd
         resources:
           limits:
             memory: "128Mi"
