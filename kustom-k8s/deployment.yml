@@ -57,24 +57,3 @@ spec:
 
 
 
-
-apiVersion: apps/v1
-kind: ReplicaSet
-metadata:
-  name: myreplicaset
-  labels:
-    app: myapp
-    key: value
-spec:
-  replicas: <Replicas>
-  selector:
-    matchLabels:
-      key: value
-  template:
-    metadata:
-      labels:
-        key: value
-    spec:
-      containers:
-        - name: myapp
-          image: <Image>
