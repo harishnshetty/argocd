@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: harishnshetty/nginx:v3
+        image: harishnshetty/nginx:v4
         resources:
           limits:
             memory: "128Mi"
