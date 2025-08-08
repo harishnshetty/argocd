@@ -68,13 +68,13 @@ spec:
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: tomcat-hpa
+  name: tomcat-dep
   namespace: tomcat
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: tomcat-dep
+    name: tomcat-hpa
   minReplicas: 2
   maxReplicas: 3
   metrics:
